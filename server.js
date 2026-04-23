@@ -52,10 +52,10 @@ async function start() {
     res.json({ status: 'ok', time: new Date().toISOString() })
   })
 
-  // 用户前端静态文件
-  app.use(express.static(path.join(__dirname, 'public/client')))
+  // 用户前端静态文件（构建到 public/）
+  app.use(express.static(path.join(__dirname, 'public')))
 
-  // 管理后台静态文件
+  // 管理后台静态文件（构建到 public/admin/）
   app.use('/admin', express.static(path.join(__dirname, 'public/admin')))
 
   // SPA fallback — 管理后台
@@ -66,7 +66,7 @@ async function start() {
   // SPA fallback — 用户前端（放最后）
   app.get('*', (req, res) => {
     if (!req.path.startsWith('/api') && !req.path.startsWith('/uploads')) {
-      res.sendFile(path.join(__dirname, 'public/client/index.html'))
+      res.sendFile(path.join(__dirname, 'public/index.html'))
     }
   })
 

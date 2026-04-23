@@ -4,9 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Bitté 拼贴编辑器后端",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
     "build": "cd client && npm install && npm run build && cd ../admin && npm install && npm run build",
     "dev": "node --watch server.js"
   },
