@@ -24,7 +24,7 @@ async function request(path, options = {}) {
   // 401 时清除 token 并跳转登录
   if (res.status === 401) {
     localStorage.removeItem('admin_token')
-    window.location.href = '/login'
+    window.location.href = '/admin/login'
     throw new Error('未授权')
   }
 
