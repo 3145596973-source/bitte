@@ -1,7 +1,7 @@
 <template>
   <div class="toolbar-top">
     <div class="toolbar-top-left">
-      <img src="/logo.png" alt="Bitté" class="toolbar-logo">
+      <img :src="'/logo.png'" alt="Bitté" class="toolbar-logo">
       <button
         class="tb-btn"
         :class="{ disabled: canvasStore.undoStack.length <= 1 }"

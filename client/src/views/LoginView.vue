@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
     <div class="login-card">
-      <img src="/logo.png" alt="Bitté" class="login-logo">
+      <img :src="'/logo.png'" alt="Bitté" class="login-logo">
       <h1 class="login-title">欢迎来到 Bitté</h1>
       <p class="login-subtitle">创意拼贴，从这里开始</p>
 
